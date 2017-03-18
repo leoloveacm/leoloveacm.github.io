@@ -3,24 +3,45 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hello blog on github | Sweet Orange</title>
+  <title>AndroidLearning(1)——UI设计 | Sweet Orange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hello Github Blog
-首先欢迎大家来看我的主页，么么哒
-因为CSDN上面写着真是费劲，而且不是非常好看，所以我在把博客搬到github上面，还有就是学习了一下Markdown，这样子给我用hexo写博客有了一个很好的契机下面是我原来的blog，现在看起来不仅是naive，而且写的东西也不够称的上是blog，更多的是ACM题解，没有什么营养的那种，下面也会逐渐把上面的文章搬运过来的。">
+  <meta name="description" content="chapter.1 控制UI界面
+使用的是android 5.1.1版本，因为手机暂时是这个版本的。
+
+
+Android提供了四种方法控制UI，分别是：
+
+XML布局文件
+在代码中控制
+使用XML和Java混合
+开发自定义View下面我们开始了解这四种布局的方式1.1 使用XML布局控制UI在此之前需要提前了解XML的写法和Android解析XML的方式(为什么不用JSON，好写好看，orz)关键">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hello blog on github">
-<meta property="og:url" content="http://yoursite.com/2017/03/15/hello-blog-on-github/index.html">
+<meta property="og:title" content="AndroidLearning(1)——UI设计">
+<meta property="og:url" content="http://yoursite.com/2017/03/16/AndroidLearning(1)/index.html">
 <meta property="og:site_name" content="Sweet Orange">
-<meta property="og:description" content="Hello Github Blog
-首先欢迎大家来看我的主页，么么哒
-因为CSDN上面写着真是费劲，而且不是非常好看，所以我在把博客搬到github上面，还有就是学习了一下Markdown，这样子给我用hexo写博客有了一个很好的契机下面是我原来的blog，现在看起来不仅是naive，而且写的东西也不够称的上是blog，更多的是ACM题解，没有什么营养的那种，下面也会逐渐把上面的文章搬运过来的。">
-<meta property="og:updated_time" content="2017-03-18T07:55:39.770Z">
+<meta property="og:description" content="chapter.1 控制UI界面
+使用的是android 5.1.1版本，因为手机暂时是这个版本的。
+
+
+Android提供了四种方法控制UI，分别是：
+
+XML布局文件
+在代码中控制
+使用XML和Java混合
+开发自定义View下面我们开始了解这四种布局的方式1.1 使用XML布局控制UI在此之前需要提前了解XML的写法和Android解析XML的方式(为什么不用JSON，好写好看，orz)关键">
+<meta property="og:updated_time" content="2017-03-18T01:03:59.435Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hello blog on github">
-<meta name="twitter:description" content="Hello Github Blog
-首先欢迎大家来看我的主页，么么哒
-因为CSDN上面写着真是费劲，而且不是非常好看，所以我在把博客搬到github上面，还有就是学习了一下Markdown，这样子给我用hexo写博客有了一个很好的契机下面是我原来的blog，现在看起来不仅是naive，而且写的东西也不够称的上是blog，更多的是ACM题解，没有什么营养的那种，下面也会逐渐把上面的文章搬运过来的。">
+<meta name="twitter:title" content="AndroidLearning(1)——UI设计">
+<meta name="twitter:description" content="chapter.1 控制UI界面
+使用的是android 5.1.1版本，因为手机暂时是这个版本的。
+
+
+Android提供了四种方法控制UI，分别是：
+
+XML布局文件
+在代码中控制
+使用XML和Java混合
+开发自定义View下面我们开始了解这四种布局的方式1.1 使用XML布局控制UI在此之前需要提前了解XML的写法和Android解析XML的方式(为什么不用JSON，好写好看，orz)关键">
   
     <link rel="alternate" href="/atom.xml" title="Sweet Orange" type="application/atom+xml">
   
@@ -73,10 +94,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-blog-on-github" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-AndroidLearning(1)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/03/15/hello-blog-on-github/" class="article-date">
-  <time datetime="2017-03-15T09:59:35.000Z" itemprop="datePublished">2017-03-15</time>
+    <a href="/2017/03/16/AndroidLearning(1)/" class="article-date">
+  <time datetime="2017-03-15T16:08:04.000Z" itemprop="datePublished">2017-03-16</time>
 </a>
     
   <div class="article-category">
@@ -91,7 +112,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hello blog on github
+      AndroidLearning(1)——UI设计
     </h1>
   
 
@@ -99,19 +120,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Hello-Github-Blog"><a href="#Hello-Github-Blog" class="headerlink" title="Hello Github Blog"></a>Hello Github Blog</h1><hr>
-<p>首先欢迎大家来看我的主页，么么哒</p>
-<p>因为CSDN上面写着真是费劲，而且不是非常好看，所以我在把博客搬到github上面，还有就是学习了一下Markdown，这样子给我用hexo写博客有了一个很好的契机下面是我原来的blog，现在看起来不仅是naive，而且写的东西也不够称的上是blog，更多的是ACM题解，没有什么营养的那种，下面也会逐渐把上面的文章搬运过来的。</p>
-<p>原来博客的链接：<br><a href="http://blog.csdn.net/kissacm" target="_blank" rel="external">以前CSDN的博客</a><br>也欢迎大家到我原来的博客</p>
-<p>然后以后也会有更多的技术的blog吧，然后欢迎github上面的各位大神多指点啦。</p>
+        <h3 id="chapter-1-控制UI界面"><a href="#chapter-1-控制UI界面" class="headerlink" title="chapter.1 控制UI界面"></a>chapter.1 控制UI界面</h3><blockquote>
+<p>使用的是android 5.1.1版本，因为手机暂时是这个版本的。</p>
+</blockquote>
+<hr>
+<p>Android提供了四种方法控制UI，分别是：</p>
+<ol>
+<li>XML布局文件</li>
+<li>在代码中控制</li>
+<li>使用XML和Java混合</li>
+<li>开发自定义View<br>下面我们开始了解这四种布局的方式<h4 id="1-1-使用XML布局控制UI"><a href="#1-1-使用XML布局控制UI" class="headerlink" title="1.1 使用XML布局控制UI"></a>1.1 使用XML布局控制UI</h4>在此之前需要提前了解XML的写法和Android解析XML的方式(为什么不用JSON，好写好看，orz)<br>关键是下面两步：</li>
+</ol>
+<ul>
+<li>编写res/layout下的XML文件，注意命名规则需要符合Java的命名</li>
+<li>显示XML代码中布局的内容<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">setContentView(R.layout.main);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在activity_main.xml中，通过设置不同的属性可以对于背景、组件样式、位置等等进行设置。<br>对于我们固定的一些文字内容，我们往往会加到string.xml中间<br>对于一些对于格式的调整，我们加到style.xml中(可能需要自己创建)</p>
+<h4 id="1-2-使用代码控制UI界面"><a href="#1-2-使用代码控制UI界面" class="headerlink" title="1.2 使用代码控制UI界面"></a>1.2 使用代码控制UI界面</h4><p>android 支持想Swing那样完全通过代码控制UI界面，也就说可以用new来创建所有的组建。<br>关键是下面几步：</p>
+<ul>
+<li>创建布局管理器</li>
+<li>创建具体的组件</li>
+<li>将这个组件加到布局管理器中间</li>
+</ul>
+<p>简单的栗子：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//	setContentView(R.layout.activity_main); //要先删去这一句，后面的</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/15/hello-blog-on-github/" data-id="cj0f04h280004f8o009oklbc2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/16/AndroidLearning(1)/" data-id="cj0f04h0q0000f8o0jdkpskad" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/start/">start</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
 
     </footer>
   </div>
@@ -119,15 +159,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/03/16/AndroidLearning(1)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/18/ACM题解-codeforce-404div2-E/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          AndroidLearning(1)——UI设计
+          ACM题解 codeforce-404div2-E
         
       </div>
     </a>
   
+  
+    <a href="/2017/03/15/hello-blog-on-github/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hello blog on github</div>
+    </a>
   
 </nav>
 
