@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ACM题解-codeforce-402div2-A | Sweet Orange</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="问题一个很简单的题，但是我要从中间看我们是怎么设计算法的题意很简单，两组数据，所有数字都是1~5，问最少的交换次数，使得两组含有相同的数字是一样的，如果无法做到，输出-1
+思路最简单的一点是：如果有一个数字的个数不是偶数，那么直接输出-1如果出现了这样的情况，我们如何改变呢？
+首先我们在可以成立的情况下，我们可以构造出一个最终的数列，显然这个解数列是唯一的。那么，我们看到一个数列如何向这个这个标准">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ACM题解-codeforce-402div2-A">
+<meta property="og:url" content="http://yoursite.com/2017/03/29/ACM题解-codeforce-402div2-A/index.html">
+<meta property="og:site_name" content="Sweet Orange">
+<meta property="og:description" content="问题一个很简单的题，但是我要从中间看我们是怎么设计算法的题意很简单，两组数据，所有数字都是1~5，问最少的交换次数，使得两组含有相同的数字是一样的，如果无法做到，输出-1
+思路最简单的一点是：如果有一个数字的个数不是偶数，那么直接输出-1如果出现了这样的情况，我们如何改变呢？
+首先我们在可以成立的情况下，我们可以构造出一个最终的数列，显然这个解数列是唯一的。那么，我们看到一个数列如何向这个这个标准">
+<meta property="og:updated_time" content="2017-03-29T07:38:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ACM题解-codeforce-402div2-A">
+<meta name="twitter:description" content="问题一个很简单的题，但是我要从中间看我们是怎么设计算法的题意很简单，两组数据，所有数字都是1~5，问最少的交换次数，使得两组含有相同的数字是一样的，如果无法做到，输出-1
+思路最简单的一点是：如果有一个数字的个数不是偶数，那么直接输出-1如果出现了这样的情况，我们如何改变呢？
+首先我们在可以成立的情况下，我们可以构造出一个最终的数列，显然这个解数列是唯一的。那么，我们看到一个数列如何向这个这个标准">
+  
+    <link rel="alternate" href="/atom.xml" title="Sweet Orange" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Sweet Orange</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">geekorange_neko34&#39;s blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ACM题解-codeforce-402div2-A" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/29/ACM题解-codeforce-402div2-A/" class="article-date">
+  <time datetime="2017-03-29T07:21:44.000Z" itemprop="datePublished">2017-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ACM题解-codeforce-402div2-A
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>一个很简单的题，但是我要从中间看我们是怎么设计算法的<br>题意很简单，两组数据，所有数字都是1~5，问最少的交换次数，使得两组含有相同的数字是一样的，如果无法做到，输出-1</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>最简单的一点是：如果有一个数字的个数不是偶数，那么直接输出-1<br>如果出现了这样的情况，我们如何改变呢？</p>
+<p>首先我们在可以成立的情况下，我们可以构造出一个最终的数列，显然这个解数列是唯一的。<br>那么，我们看到一个数列如何向这个这个标准数列转化呢？<br>注意到我们显然是不能够计算不同的，原因非常简单，因为我们的一次转化可以改变两次差距。所以现在的问题是：是不是每次都是改变两个<br>答案是显然的，因为当我多一个的时候，我们必然会有缺少的(考虑我们的解数列是唯一的)</p>
+<h4 id="代码和实现"><a href="#代码和实现" class="headerlink" title="代码和实现"></a>代码和实现</h4><p>实现还是比较简单的<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN = <span class="number">110</span>;</div><div class="line"><span class="keyword">int</span> a[MAXN],b[MAXN];</div><div class="line"><span class="keyword">int</span> cnt[<span class="number">10</span>],m[<span class="number">10</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> tmp,n;</div><div class="line">    <span class="built_in">cin</span> &gt;&gt; n;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line">        cnt[a[i]] ++;</div><div class="line">        m[a[i]] ++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;b[i]);</div><div class="line">        cnt[b[i]] ++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">5</span>;i++) &#123;</div><div class="line">        <span class="keyword">if</span>(cnt[i] &amp; <span class="number">1</span>) <span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">"-1"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">5</span>;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(m[i] &gt; cnt[i] / <span class="number">2</span>) ans += m[i] - cnt[i] / <span class="number">2</span>; </div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/29/ACM题解-codeforce-402div2-A/" data-id="cj0unuanc0000lso0qkgkn4dq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简单题/">简单题</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/18/ACM题解-codeforce-404div2-E/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ACM题解 codeforce-404div2-E</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/算法练习/">算法练习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程/">编程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codeforces/">codeforces</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/">program</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/start/">start</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分块/">分块</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树状数组/">树状数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/简单题/">简单题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/逆序数问题/">逆序数问题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/codeforces/" style="font-size: 10px;">codeforces</a> <a href="/tags/program/" style="font-size: 10px;">program</a> <a href="/tags/start/" style="font-size: 10px;">start</a> <a href="/tags/分块/" style="font-size: 10px;">分块</a> <a href="/tags/树状数组/" style="font-size: 10px;">树状数组</a> <a href="/tags/简单题/" style="font-size: 10px;">简单题</a> <a href="/tags/逆序数问题/" style="font-size: 10px;">逆序数问题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/29/ACM题解-codeforce-402div2-A/">ACM题解-codeforce-402div2-A</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/18/ACM题解-codeforce-404div2-E/">ACM题解 codeforce-404div2-E</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/16/AndroidLearning(1)/">AndroidLearning(1)——UI设计</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/15/hello-blog-on-github/">hello blog on github</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 leoloveacm_geekorange_neko34<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
