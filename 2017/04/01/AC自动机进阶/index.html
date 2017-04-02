@@ -3,17 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Sweet Orange</title>
+  <title>AC自动机进阶 | Sweet Orange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="geekorang(neko34)&apos;s blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sweet Orange">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="首先感谢AXQ老师的讲解AC自动机基础教程请参照我以后的博客AC自动机基础
+
+一些非常有用性质对于AC自动机的构造就不说了，下面说几个性质
+
+考虑到AC自动机中除root节点都有指向其他节点的fail指针，即N个节点N-1条边，并且一定是连通的，最后我们的fail指针是一棵树
+一个fail链的最后一个字符串是一个公共的字符串，刚刚所有经过的后缀都和这个串相同
+自动机是状态转移形式，所以在一个节点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AC自动机进阶">
+<meta property="og:url" content="http://yoursite.com/2017/04/01/AC自动机进阶/index.html">
 <meta property="og:site_name" content="Sweet Orange">
-<meta property="og:description" content="geekorang(neko34)&apos;s blog">
+<meta property="og:description" content="首先感谢AXQ老师的讲解AC自动机基础教程请参照我以后的博客AC自动机基础
+
+一些非常有用性质对于AC自动机的构造就不说了，下面说几个性质
+
+考虑到AC自动机中除root节点都有指向其他节点的fail指针，即N个节点N-1条边，并且一定是连通的，最后我们的fail指针是一棵树
+一个fail链的最后一个字符串是一个公共的字符串，刚刚所有经过的后缀都和这个串相同
+自动机是状态转移形式，所以在一个节点">
+<meta property="og:updated_time" content="2017-04-02T07:49:52.536Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sweet Orange">
-<meta name="twitter:description" content="geekorang(neko34)&apos;s blog">
+<meta name="twitter:title" content="AC自动机进阶">
+<meta name="twitter:description" content="首先感谢AXQ老师的讲解AC自动机基础教程请参照我以后的博客AC自动机基础
+
+一些非常有用性质对于AC自动机的构造就不说了，下面说几个性质
+
+考虑到AC自动机中除root节点都有指向其他节点的fail指针，即N个节点N-1条边，并且一定是连通的，最后我们的fail指针是一棵树
+一个fail链的最后一个字符串是一个公共的字符串，刚刚所有经过的后缀都和这个串相同
+自动机是状态转移形式，所以在一个节点">
   
     <link rel="alternate" href="/atom.xml" title="Sweet Orange" type="application/atom+xml">
   
@@ -66,9 +85,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-AC自动机进阶" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-AC自动机进阶" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/04/01/AC自动机进阶/" class="article-date">
   <time datetime="2017-04-01T14:35:14.000Z" itemprop="datePublished">2017-04-01</time>
@@ -81,8 +98,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/01/AC自动机进阶/">AC自动机进阶</a>
+    <h1 class="article-title" itemprop="name">
+      AC自动机进阶
     </h1>
   
 
@@ -115,233 +132,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-ACM题解-codeforce-402div2-A" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/29/ACM题解-codeforce-402div2-A/" class="article-date">
-  <time datetime="2017-03-29T07:21:44.000Z" itemprop="datePublished">2017-03-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/29/ACM题解-codeforce-402div2-A/">ACM题解-codeforce-402div2-A</a>
-    </h1>
+    <a href="/2017/03/29/ACM题解-codeforce-402div2-A/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ACM题解-codeforce-402div2-A</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>一个很简单的题，但是我要从中间看我们是怎么设计算法的<br>题意很简单，两组数据，所有数字都是1~5，问最少的交换次数，使得两组含有相同的数字是一样的，如果无法做到，输出-1</p>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>最简单的一点是：如果有一个数字的个数不是偶数，那么直接输出-1<br>如果出现了这样的情况，我们如何改变呢？</p>
-<p>首先我们在可以成立的情况下，我们可以构造出一个最终的数列，显然这个解数列是唯一的。<br>那么，我们看到一个数列如何向这个这个标准数列转化呢？<br>注意到我们显然是不能够计算不同的，原因非常简单，因为我们的一次转化可以改变两次差距。所以现在的问题是：是不是每次都是改变两个<br>答案是显然的，因为当我多一个的时候，我们必然会有缺少的(考虑我们的解数列是唯一的)<br>这个唯一性，就是我们解决这个问题的一个重要的情况</p>
-<p>当我们遭遇这种构造题的时候，如果我们能很快的确定这个解非常唯一的话，那么我们实际上就是拥有了一个参照物</p>
-<h4 id="代码和实现"><a href="#代码和实现" class="headerlink" title="代码和实现"></a>代码和实现</h4><p>实现还是比较简单的<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN = <span class="number">110</span>;</div><div class="line"><span class="keyword">int</span> a[MAXN],b[MAXN];</div><div class="line"><span class="keyword">int</span> cnt[<span class="number">10</span>],m[<span class="number">10</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> tmp,n;</div><div class="line">    <span class="built_in">cin</span> &gt;&gt; n;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line">        cnt[a[i]] ++;</div><div class="line">        m[a[i]] ++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;b[i]);</div><div class="line">        cnt[b[i]] ++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">5</span>;i++) &#123;</div><div class="line">        <span class="keyword">if</span>(cnt[i] &amp; <span class="number">1</span>) <span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">"-1"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">5</span>;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(m[i] &gt; cnt[i] / <span class="number">2</span>) ans += m[i] - cnt[i] / <span class="number">2</span>; </div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/29/ACM题解-codeforce-402div2-A/" data-id="cj10e18n1000u8oo0gjfbo8pi" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简单题/">简单题</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-ACM题解-codeforce-404div2-E" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/18/ACM题解-codeforce-404div2-E/" class="article-date">
-  <time datetime="2017-03-18T07:55:20.000Z" itemprop="datePublished">2017-03-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/算法练习/">算法练习</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/18/ACM题解-codeforce-404div2-E/">ACM题解 codeforce-404div2-E</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>问题是这样的：给一个序列，一开始是1~n，但是每次查询会交换两个数字的位置，有Q次询问，然后每次询问这个序列中有多少个逆序对，其中 (1&lt;=n&lt;=2e5),(1&lt;=Q&lt;=5e4)</p>
-<hr>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>关于逆序对，我们有很多方法来求，在这个问题中，我们使用分块和树状数组来解决这个问题</p>
-<p>我们首先来看这个问题：<br>如果我们现在知道一个序列的逆序数，然后现在给你两个数字进行交换，实际上我们需要知道什么，就可以知道这个解了：<br>··················|====================|—————<br>比如现在两个’|’是要进行交换的<br>那么显然：</p>
-<ul>
-<li>包括·和-这两个的逆序对是不会改变的：大小关系和位置关系没有发生改变</li>
-<li>对于=部分：<ul>
-<li>如果是比a[l]大的，那么这部分原来不是逆序，接下来是了</li>
-<li>如果是比a[l]小的，那么这部分原来是，但是现在不是了</li>
-<li>对于a[r]的分析类似</li>
-</ul>
-</li>
-<li>注意两个特殊的情况<ul>
-<li>l == r 显然就是上一次的结果，什么都不动输出就好了。</li>
-<li>r == l + 1 这个时候没有=部分的序列，那么就两个数字比较一下加加减减就行了。</li>
-</ul>
-</li>
-</ul>
-<p>那么这样的话更新就简单了：我们只要查询中间数字的大小关系，注意每个数字之间是不会相等的。<br>那么这样子的话，比如树状数组或者是Segment Tree往往就是一个不错的选择。</p>
-<hr>
-<h4 id="分块的技巧"><a href="#分块的技巧" class="headerlink" title="分块的技巧"></a>分块的技巧</h4><p>下面就是如何使用树状数组了<br>这次，我使用了一个分块的技巧使得我们的树状数组的效率能够更加好一点：</p>
-<p>我们把树状数组开成二维数组，下面我们把<br>我们把这个区间划分成sqrt(n) * sqrt(n),我们记block = sqrt(n)<br>这个时候我们每次update的时候，这个pos / block作为一个id对于bt进行索引，随后这个id对应的一维数组维护从这个block的数据<br>查询的具体过程：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">ask</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(l &lt;= r)&#123;</div><div class="line">        <span class="comment">//这个判断是否这个block是否是完全在一开始的[l,r]中间</span></div><div class="line">        <span class="keyword">if</span>(l / block * block == l &amp;&amp; (l / block + <span class="number">1</span>) * block == r)&#123;</div><div class="line">            res += askblock(l,...);</div><div class="line">            l += block;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            res += asksignal(l,...);</div><div class="line">            l++;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line">这样就完成了优化。</div></pre></td></tr></table></figure></p>
-<hr>
-<h4 id="代码和实现"><a href="#代码和实现" class="headerlink" title="代码和实现"></a>代码和实现</h4><p>代码的实现在下面，注意中间分块的技巧<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</div><div class="line"><span class="keyword">int</span> n,q;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> Block = <span class="number">500</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN = <span class="number">200000</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">int</span> bt[MAXN / Block + <span class="number">10</span>][MAXN];</div><div class="line"><span class="keyword">int</span> a[MAXN];</div><div class="line">LL cnt = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123; </div><div class="line">    <span class="keyword">return</span> x &amp; (-x); </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> id,<span class="keyword">int</span> pos,<span class="keyword">int</span> val)</span></span>&#123;</div><div class="line">    <span class="keyword">while</span>(pos &lt; MAXN)&#123;</div><div class="line">        bt[id][pos] += val;</div><div class="line">        pos += lowbit(pos);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">LL <span class="title">query</span><span class="params">(<span class="keyword">int</span> id ,<span class="keyword">int</span> pos)</span></span>&#123;</div><div class="line">    LL res = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(pos)&#123;</div><div class="line">        res += LL(bt[id][pos]);</div><div class="line">        pos -= lowbit(pos);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">LL <span class="title">ask</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> pos)</span></span>&#123;<span class="comment">//分块查询</span></div><div class="line">    LL res = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(l &lt;= r)&#123;</div><div class="line">        <span class="comment">//这一段是这样的</span></div><div class="line">        <span class="comment">//对于前面这个查询的意思是，这个l是一个区间的起点，而且这个区间完全在(l,r)之间</span></div><div class="line">        <span class="comment">//这个时候我就可以一次查询一个完整的sqrt(n),大大的节约了时间，当然，对于空间的要求也剧烈的增加</span></div><div class="line">        <span class="keyword">if</span>(l / Block * Block == l &amp;&amp; (l / Block + <span class="number">1</span>) * Block &lt;= r)&#123;</div><div class="line">            res += query(l/Block,pos);</div><div class="line">            l += Block;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">if</span>(a[l] &lt;= pos) res ++;</div><div class="line">            l ++;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(r - l &gt; <span class="number">1</span>)&#123;</div><div class="line">        LL tmp = ask(l+<span class="number">1</span>,r<span class="number">-1</span>,a[l]<span class="number">-1</span>);</div><div class="line">        cnt -= tmp;</div><div class="line">        cnt += LL(r - l - <span class="number">1</span>) - tmp;</div><div class="line">        tmp = ask(l+<span class="number">1</span>,r<span class="number">-1</span>,a[r]<span class="number">-1</span>);</div><div class="line">        cnt += tmp;</div><div class="line">        cnt -= LL(r - l - <span class="number">1</span>) - tmp;</div><div class="line">    &#125;</div><div class="line">    cnt -= (a[l] &gt; a[r]);</div><div class="line">    update(l/Block,a[l],<span class="number">-1</span>);</div><div class="line">    update(r/Block,a[r],<span class="number">-1</span>);</div><div class="line">    swap(a[l],a[r]);</div><div class="line">    update(l/Block,a[l],<span class="number">1</span>);</div><div class="line">    update(r/Block,a[r],<span class="number">1</span>);</div><div class="line">    cnt += (a[l] &gt; a[r]);</div><div class="line">    <span class="keyword">return</span> ;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;q);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) &#123;</div><div class="line">        a[i] = i;</div><div class="line">        update(i/Block,i,<span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> l,r;</div><div class="line">    <span class="keyword">while</span>(q--)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;l,&amp;r);</div><div class="line">        <span class="keyword">if</span>(l == r) &#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,cnt);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">if</span>(l &gt; r) swap(l,r);</div><div class="line">            change(l,r);</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,cnt);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>(END)<br><strong>stay hungry , stay foolish</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/18/ACM题解-codeforce-404div2-E/" data-id="cj10e18kj00088oo0vl88xovz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codeforces/">codeforces</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分块/">分块</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/树状数组/">树状数组</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/逆序数问题/">逆序数问题</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-AndroidLearning(1)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/16/AndroidLearning(1)/" class="article-date">
-  <time datetime="2017-03-15T16:08:04.000Z" itemprop="datePublished">2017-03-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程/">编程</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/16/AndroidLearning(1)/">AndroidLearning(1)——UI设计</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="chapter-1-控制UI界面"><a href="#chapter-1-控制UI界面" class="headerlink" title="chapter.1 控制UI界面"></a>chapter.1 控制UI界面</h3><blockquote>
-<p>使用的是android 5.1.1版本，因为手机暂时是这个版本的。</p>
-</blockquote>
-<hr>
-<p>Android提供了四种方法控制UI，分别是：</p>
-<ol>
-<li>XML布局文件</li>
-<li>在代码中控制</li>
-<li>使用XML和Java混合</li>
-<li>开发自定义View<br>下面我们开始了解这四种布局的方式<h4 id="1-1-使用XML布局控制UI"><a href="#1-1-使用XML布局控制UI" class="headerlink" title="1.1 使用XML布局控制UI"></a>1.1 使用XML布局控制UI</h4>在此之前需要提前了解XML的写法和Android解析XML的方式(为什么不用JSON，好写好看，orz)<br>关键是下面两步：</li>
-</ol>
-<ul>
-<li>编写res/layout下的XML文件，注意命名规则需要符合Java的命名</li>
-<li>显示XML代码中布局的内容<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">setContentView(R.layout.main);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>在activity_main.xml中，通过设置不同的属性可以对于背景、组件样式、位置等等进行设置。<br>对于我们固定的一些文字内容，我们往往会加到string.xml中间<br>对于一些对于格式的调整，我们加到style.xml中(可能需要自己创建)</p>
-<h4 id="1-2-使用代码控制UI界面"><a href="#1-2-使用代码控制UI界面" class="headerlink" title="1.2 使用代码控制UI界面"></a>1.2 使用代码控制UI界面</h4><p>android 支持想Swing那样完全通过代码控制UI界面，也就说可以用new来创建所有的组建。<br>关键是下面几步：</p>
-<ul>
-<li>创建布局管理器</li>
-<li>创建具体的组件</li>
-<li>将这个组件加到布局管理器中间</li>
-</ul>
-<p>简单的栗子：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//	setContentView(R.layout.activity_main); //要先删去这一句，后面的</span></div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/16/AndroidLearning(1)/" data-id="cj10e18ko000b8oo0b2mcsjc1" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-blog-on-github" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/15/hello-blog-on-github/" class="article-date">
-  <time datetime="2017-03-15T09:59:35.000Z" itemprop="datePublished">2017-03-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程/">编程</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/15/hello-blog-on-github/">hello blog on github</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Hello-Github-Blog"><a href="#Hello-Github-Blog" class="headerlink" title="Hello Github Blog"></a>Hello Github Blog</h1><hr>
-<p>首先欢迎大家来看我的主页，么么哒</p>
-<p>因为CSDN上面写着真是费劲，而且不是非常好看，所以我在把博客搬到github上面，还有就是学习了一下Markdown，这样子给我用hexo写博客有了一个很好的契机下面是我原来的blog，现在看起来不仅是naive，而且写的东西也不够称的上是blog，更多的是ACM题解，没有什么营养的那种，下面也会逐渐把上面的文章搬运过来的。</p>
-<p>原来博客的链接：<br><a href="http://blog.csdn.net/kissacm" target="_blank" rel="external">以前CSDN的博客</a><br>也欢迎大家到我原来的博客</p>
-<p>然后以后也会有更多的技术的blog吧，然后欢迎github上面的各位大神多指点啦。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/15/hello-blog-on-github/" data-id="cj10e18kg00078oo0f2smati0" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/start/">start</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
