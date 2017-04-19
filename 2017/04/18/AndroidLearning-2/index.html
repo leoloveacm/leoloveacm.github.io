@@ -3,17 +3,54 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: 编程 | Sweet Orange</title>
+  <title>AndroidLearning(2) | Sweet Orange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="geekorang(neko34)&apos;s blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sweet Orange">
-<meta property="og:url" content="http://yoursite.com/categories/编程/index.html">
+  <meta name="description" content="探讨一下Activity
+
+在Android中，activity表示一屏，或者是平板中的一个窗口，是android的重要组件。Activity有四个状态：
+
+活动
+暂停
+停止
+销毁
+
+从而一个显然的情况是，android必须是提供一些钩子一样的东西来监视在activity的整个生命周期中的各个变化，对于布局和功能有所变化。下面是一些函数：
+
+onCreate():创建的时候就被重写了
+onSta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AndroidLearning(2)">
+<meta property="og:url" content="http://yoursite.com/2017/04/18/AndroidLearning-2/index.html">
 <meta property="og:site_name" content="Sweet Orange">
-<meta property="og:description" content="geekorang(neko34)&apos;s blog">
+<meta property="og:description" content="探讨一下Activity
+
+在Android中，activity表示一屏，或者是平板中的一个窗口，是android的重要组件。Activity有四个状态：
+
+活动
+暂停
+停止
+销毁
+
+从而一个显然的情况是，android必须是提供一些钩子一样的东西来监视在activity的整个生命周期中的各个变化，对于布局和功能有所变化。下面是一些函数：
+
+onCreate():创建的时候就被重写了
+onSta">
+<meta property="og:updated_time" content="2017-04-19T01:54:06.087Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sweet Orange">
-<meta name="twitter:description" content="geekorang(neko34)&apos;s blog">
+<meta name="twitter:title" content="AndroidLearning(2)">
+<meta name="twitter:description" content="探讨一下Activity
+
+在Android中，activity表示一屏，或者是平板中的一个窗口，是android的重要组件。Activity有四个状态：
+
+活动
+暂停
+停止
+销毁
+
+从而一个显然的情况是，android必须是提供一些钩子一样的东西来监视在activity的整个生命周期中的各个变化，对于布局和功能有所变化。下面是一些函数：
+
+onCreate():创建的时候就被重写了
+onSta">
   
     <link rel="alternate" href="/atom.xml" title="Sweet Orange" type="application/atom+xml">
   
@@ -66,58 +103,94 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/16/AndroidLearning(1)/" class="archive-article-date">
-  <time datetime="2017-03-15T16:08:04.000Z" itemprop="datePublished">3月 16</time>
+        <section id="main"><article id="post-AndroidLearning-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/18/AndroidLearning-2/" class="article-date">
+  <time datetime="2017-04-18T15:17:44.000Z" itemprop="datePublished">2017-04-18</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/16/AndroidLearning(1)/">AndroidLearning(1)——UI设计</a>
+    <h1 class="article-title" itemprop="name">
+      AndroidLearning(2)
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/15/hello-blog-on-github/" class="archive-article-date">
-  <time datetime="2017-03-15T09:59:35.000Z" itemprop="datePublished">3月 15</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/15/hello-blog-on-github/">hello blog on github</a>
-    </h1>
-  
+        <blockquote>
+<p>探讨一下Activity</p>
+</blockquote>
+<p>在Android中，activity表示一屏，或者是平板中的一个窗口，是android的重要组件。<br>Activity有四个状态：</p>
+<ul>
+<li>活动</li>
+<li>暂停</li>
+<li>停止</li>
+<li>销毁</li>
+</ul>
+<p>从而一个显然的情况是，android必须是提供一些钩子一样的东西来监视在activity的整个生命周期中的各个变化，对于布局和功能有所变化。<br>下面是一些函数：</p>
+<ol>
+<li>onCreate():创建的时候就被重写了</li>
+<li>onStart():启动的时候调用</li>
+<li>onRestart():重新启动的时候被调用</li>
+<li>onPause():暂停的时候</li>
+<li>onResume():重新回到活动状态的时候调用</li>
+<li>onStop():停止的时候被调用</li>
+<li>onDestroy():销毁的时候被调用</li>
+</ol>
+<p>创建activity</p>
+<ol>
+<li>创建一个activity，一般是需要继承android.app.activity，不过在不同的情况我们也是会使用不同的子类</li>
+<li>重写需要或者是对应的钩子</li>
+</ol>
+<p>配置activity</p>
+<ol>
+<li>在AndroidMainfest.xml文件中进行配置<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">activity</span></span></div><div class="line">    <span class="attr">android:name</span>=<span class="string">""</span></div><div class="line">    <span class="attr">android:label</span>=<span class="string">""</span></div><div class="line">    <span class="attr">..............</span></div><div class="line">    &gt;</div><div class="line"><span class="tag">&lt;/<span class="name">activity</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>启动和关闭activity<br>如果一个activity不是唯一的activity，那么就需要下面的代码来启动：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startActivity</span><span class="params">(Intent Intent)</span></span></div></pre></td></tr></table></figure></p>
+<p>比如要启动一个叫做DetailActivity的Activity，使用下面的代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Intent intent = <span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,DetailActivity.class)</div></pre></td></tr></table></figure></p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/18/AndroidLearning-2/" data-id="cj1ocnbcx0006doo0g64req6m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/19/网址导航/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          网址导航
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/01/AC自动机进阶/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">AC自动机进阶</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
