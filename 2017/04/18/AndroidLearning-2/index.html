@@ -35,7 +35,7 @@ onSta">
 
 onCreate():创建的时候就被重写了
 onSta">
-<meta property="og:updated_time" content="2017-04-19T01:54:06.087Z">
+<meta property="og:updated_time" content="2017-04-20T00:42:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AndroidLearning(2)">
 <meta name="twitter:description" content="探讨一下Activity
@@ -156,12 +156,13 @@ onSta">
 </li>
 </ol>
 <p>启动和关闭activity<br>如果一个activity不是唯一的activity，那么就需要下面的代码来启动：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startActivity</span><span class="params">(Intent Intent)</span></span></div></pre></td></tr></table></figure></p>
-<p>比如要启动一个叫做DetailActivity的Activity，使用下面的代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Intent intent = <span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,DetailActivity.class)</div></pre></td></tr></table></figure></p>
+<p>比如要启动一个叫做DetailActivity的Activity，使用下面的代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Intent intent = <span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,DetailActivity.class);</div><div class="line">startActivity(intent);</div></pre></td></tr></table></figure></p>
+<p>对于中间的数据传输问题：<br>使用Bundle在Activity之间交换数据<br>Bundle是一个字符串值到各种Parcelable类型的映射，用于保存要携带的数据包<br>具体来说：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Bundle bundle = <span class="keyword">new</span> Bundle();</div><div class="line">bundle.putCharSequence(<span class="string">"string_name"</span>,object_name);</div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/18/AndroidLearning-2/" data-id="cj1ocnbcx0006doo0g64req6m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/18/AndroidLearning-2/" data-id="cj1q62q31000c2co0ymrcs9sb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>

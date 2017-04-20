@@ -93,7 +93,7 @@
         <h1 id="Stay-Hungry-Stay-Foolish"><a href="#Stay-Hungry-Stay-Foolish" class="headerlink" title="Stay Hungry , Stay Foolish"></a>Stay Hungry , Stay Foolish</h1><h2 id="OJ"><a href="#OJ" class="headerlink" title="OJ"></a>OJ</h2><p><a href="https://vjudge.net/" target="_blank" rel="external"><strong>vjudge</strong></a><br><a href="http://acm.hdu.edu.cn/listproblem.php?vol=1" target="_blank" rel="external"><strong>HDU</strong></a><br><a href="http://poj.org/problemlist" target="_blank" rel="external"><strong>POJ</strong></a><br><a href="http://codeforces.com/" target="_blank" rel="external"><strong>codeforces</strong></a><br><a href="http://hihocoder.com/problemset" target="_blank" rel="external"><strong>hihocoder</strong></a><br><a href="http://www.lightoj.com/index.php" target="_blank" rel="external"><strong>lightoj</strong></a></p>
 <h2 id="Blog-amp-amp-Community"><a href="#Blog-amp-amp-Community" class="headerlink" title="Blog &amp;&amp; Community"></a>Blog &amp;&amp; Community</h2><p><a href="http://www.csdn.net/" target="_blank" rel="external"><strong>CSDN</strong></a><br><a href="http://www.cnblogs.com/" target="_blank" rel="external"><strong>cnblog</strong></a><br><a href="http://www.matrix67.com/blog/" target="_blank" rel="external"><strong>Matrix</strong></a><br><a href="https://github.com/" target="_blank" rel="external"><strong>github</strong></a></p>
 <h2 id="Learn"><a href="#Learn" class="headerlink" title="Learn"></a>Learn</h2><p><a href="http://www.w3cschool.cn/" target="_blank" rel="external"><strong>w3cschool</strong></a></p>
-<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><p><a href="https://electron.atom.io/" target="_blank" rel="external"><strong>electron</strong></a><br><a href="http://cn.vuejs.org/guide/index.html" target="_blank" rel="external"><strong>Vue</strong></a></p>
+<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><p><a href="https://electron.atom.io/" target="_blank" rel="external"><strong>electron</strong></a><br><a href="http://cn.vuejs.org/guide/index.html" target="_blank" rel="external"><strong>Vue</strong></a><br><a href="http://lesscss.cn/" target="_blank" rel="external"><strong>less</strong></a></p>
 <h2 id="Tool"><a href="#Tool" class="headerlink" title="Tool"></a>Tool</h2><p><a href="http://www.jetbrains.com/" target="_blank" rel="external"><strong>JetBrains</strong></a></p>
 <h2 id="Mooc"><a href="#Mooc" class="headerlink" title="Mooc"></a>Mooc</h2><p><a href="http://www.jisuanke.com/" target="_blank" rel="external"><strong>jisuanke</strong></a></p>
 <h2 id="Use"><a href="#Use" class="headerlink" title="Use"></a>Use</h2><p><a href="202.117.80.138:8080/portal/" target="_blank" rel="external"><strong>IMC</strong></a><br><a href="http://paste.ubuntu.com/" target="_blank" rel="external"><strong>Ubuntu Pastebin</strong></a></p>
@@ -102,7 +102,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/19/网址导航/" data-id="cj1ocnbct0004doo0w4y3yk7p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/19/网址导航/" data-id="cj1q62q31000b2co0fhkagj9u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/home/">home</a></li></ul>
@@ -167,12 +167,13 @@
 </li>
 </ol>
 <p>启动和关闭activity<br>如果一个activity不是唯一的activity，那么就需要下面的代码来启动：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startActivity</span><span class="params">(Intent Intent)</span></span></div></pre></td></tr></table></figure></p>
-<p>比如要启动一个叫做DetailActivity的Activity，使用下面的代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Intent intent = <span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,DetailActivity.class)</div></pre></td></tr></table></figure></p>
+<p>比如要启动一个叫做DetailActivity的Activity，使用下面的代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Intent intent = <span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,DetailActivity.class);</div><div class="line">startActivity(intent);</div></pre></td></tr></table></figure></p>
+<p>对于中间的数据传输问题：<br>使用Bundle在Activity之间交换数据<br>Bundle是一个字符串值到各种Parcelable类型的映射，用于保存要携带的数据包<br>具体来说：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Bundle bundle = <span class="keyword">new</span> Bundle();</div><div class="line">bundle.putCharSequence(<span class="string">"string_name"</span>,object_name);</div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/18/AndroidLearning-2/" data-id="cj1ocnbcx0006doo0g64req6m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/18/AndroidLearning-2/" data-id="cj1q62q31000c2co0ymrcs9sb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
@@ -223,7 +224,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/01/AC自动机进阶/" data-id="cj1ocnbdn000pdoo0t71aa91y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/01/AC自动机进阶/" data-id="cj1q62q2l00002co0ujc3citu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM理论学习/">ACM理论学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AC自动机/">AC自动机</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字符串课程/">字符串课程</a></li></ul>
@@ -266,7 +267,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/29/ACM题解-codeforce-402div2-A/" data-id="cj1ocnbck0001doo0xa1ocgg7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/29/ACM题解-codeforce-402div2-A/" data-id="cj1q62q9z00102co0ywhs2ikh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简单题/">简单题</a></li></ul>
@@ -333,7 +334,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/18/ACM题解-codeforce-404div2-E/" data-id="cj1ocnbas0000doo0zfvknfyf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/18/ACM题解-codeforce-404div2-E/" data-id="cj1q62q3100072co0dugrq8m2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codeforces/">codeforces</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分块/">分块</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/树状数组/">树状数组</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/逆序数问题/">逆序数问题</a></li></ul>
@@ -399,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/16/AndroidLearning(1)/" data-id="cj1ocnbcu0005doo036jeidl8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/16/AndroidLearning(1)/" data-id="cj1q62q3g000d2co06qcg2yja" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
@@ -446,7 +447,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/15/hello-blog-on-github/" data-id="cj1ocnbf6000qdoo0jeiqxduo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/15/hello-blog-on-github/" data-id="cj1q62q3100082co047sqhfiv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/start/">start</a></li></ul>
