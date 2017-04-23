@@ -68,6 +68,104 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ER图" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/21/ER图/" class="article-date">
+  <time datetime="2017-04-21T11:46:38.000Z" itemprop="datePublished">2017-04-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/21/ER图/">ER图</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ER图的画法</p>
+<h4 id="杂记"><a href="#杂记" class="headerlink" title="杂记"></a>杂记</h4><ol>
+<li><p>注意一个属性如果是因为一个属性而产生的话，那么我们在概念设计的时候是不能加到两者属性中的</p>
+</li>
+<li><p>弱实体往往基本不会出现可取0的情况，因为弱实体一定要有所依赖，所以</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/21/ER图/" data-id="cj1rts9o80009mso0uhbkzk6m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/软件工程/">软件工程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Android-杂记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/20/Android-杂记/" class="article-date">
+  <time datetime="2017-04-20T12:55:46.000Z" itemprop="datePublished">2017-04-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/20/Android-杂记/">Android 杂记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>新版的android中不建议使用actionbar，而是建议使用toolbar<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;android.support.v7.widget.Toolbar</div><div class="line">        android:id="@+id/activity_login_toolbar"</div><div class="line">        android:layout_height="wrap_content"</div><div class="line">        android:minHeight="?attr/actionBarSize"</div><div class="line">        android:background="?attr/colorPrimary"</div><div class="line">        android:layout_alignParentEnd="true"</div><div class="line">        android:layout_width="match_parent"&gt;</div><div class="line">&lt;/android.support.v7.widget.Toolbar&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>代码在上面</p>
+<ol>
+<li><p>设置透明：<br>android background=”#00000000”(8个0，注意必须是8个)</p>
+</li>
+<li><p>在Android中提示用户可以用Toast,具体的创建方法是：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Toast toast = Toast.makeText(getApplicationContext(),<span class="string">"用户"</span>+bundle.getString(<span class="string">"username"</span>)+<span class="string">"上线"</span> , Toast.LENGTH_SHORT);</div><div class="line">toast.show();</div></pre></td></tr></table></figure>
+</li>
+<li><p>对于ExpandableList的使用<br>非常好看的分层列表样式，使用的时候必须</p>
+</li>
+<li></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/20/Android-杂记/" data-id="cj1rts9ph0015mso059ihxfz2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-网址导航" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/04/19/网址导航/" class="article-date">
@@ -97,12 +195,12 @@
 <h2 id="Tool"><a href="#Tool" class="headerlink" title="Tool"></a>Tool</h2><p><a href="http://www.jetbrains.com/" target="_blank" rel="external"><strong>JetBrains</strong></a></p>
 <h2 id="Mooc"><a href="#Mooc" class="headerlink" title="Mooc"></a>Mooc</h2><p><a href="http://www.jisuanke.com/" target="_blank" rel="external"><strong>jisuanke</strong></a></p>
 <h2 id="Use"><a href="#Use" class="headerlink" title="Use"></a>Use</h2><p><a href="202.117.80.138:8080/portal/" target="_blank" rel="external"><strong>IMC</strong></a><br><a href="http://paste.ubuntu.com/" target="_blank" rel="external"><strong>Ubuntu Pastebin</strong></a></p>
-<h2 id="Entertainment"><a href="#Entertainment" class="headerlink" title="Entertainment"></a>Entertainment</h2><p><a href="http://www.bilibili.com/" target="_blank" rel="external"><strong>bilibili</strong></a></p>
+<h2 id="Entertainment"><a href="#Entertainment" class="headerlink" title="Entertainment"></a>Entertainment</h2><p><a href="http://www.bilibili.com/" target="_blank" rel="external"><strong>bilibili</strong></a><br><a href="https://www.idanmu.in/" target="_blank" rel="external"><strong>idanmu</strong></a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/19/网址导航/" data-id="cj1q62q31000b2co0fhkagj9u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/19/网址导航/" data-id="cj1rts9om000emso0yq33lys6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/home/">home</a></li></ul>
@@ -173,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/18/AndroidLearning-2/" data-id="cj1q62q31000c2co0ymrcs9sb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/18/AndroidLearning-2/" data-id="cj1rts9o40006mso0em51udbe" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
@@ -224,7 +322,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/01/AC自动机进阶/" data-id="cj1q62q2l00002co0ujc3citu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/01/AC自动机进阶/" data-id="cj1rts9nt0003mso0ed37oktc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM理论学习/">ACM理论学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AC自动机/">AC自动机</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字符串课程/">字符串课程</a></li></ul>
@@ -267,7 +365,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/29/ACM题解-codeforce-402div2-A/" data-id="cj1q62q9z00102co0ywhs2ikh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/29/ACM题解-codeforce-402div2-A/" data-id="cj1rts9n80000mso0yg91bsg0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简单题/">简单题</a></li></ul>
@@ -334,7 +432,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/18/ACM题解-codeforce-404div2-E/" data-id="cj1q62q3100072co0dugrq8m2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/18/ACM题解-codeforce-404div2-E/" data-id="cj1rts9nj0001mso0vwb9xwms" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codeforces/">codeforces</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分块/">分块</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/树状数组/">树状数组</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/逆序数问题/">逆序数问题</a></li></ul>
@@ -400,7 +498,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/16/AndroidLearning(1)/" data-id="cj1q62q3g000d2co06qcg2yja" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/16/AndroidLearning(1)/" data-id="cj1rts9nx0005mso0rhzm9k92" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
@@ -447,7 +545,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/15/hello-blog-on-github/" data-id="cj1q62q3100082co047sqhfiv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/15/hello-blog-on-github/" data-id="cj1rts9of000bmso02ctmv4nw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/start/">start</a></li></ul>
@@ -478,7 +576,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ACM理论学习/">ACM理论学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AC自动机/">AC自动机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codeforces/">codeforces</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/home/">home</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/">program</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/start/">start</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分块/">分块</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字符串课程/">字符串课程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树状数组/">树状数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/简单题/">简单题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/逆序数问题/">逆序数问题</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ACM理论学习/">ACM理论学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AC自动机/">AC自动机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codeforces/">codeforces</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/home/">home</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/">program</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/start/">start</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分块/">分块</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字符串课程/">字符串课程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树状数组/">树状数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/简单题/">简单题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件工程/">软件工程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/逆序数问题/">逆序数问题</a></li></ul>
     </div>
   </div>
 
@@ -488,7 +586,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ACM理论学习/" style="font-size: 10px;">ACM理论学习</a> <a href="/tags/AC自动机/" style="font-size: 10px;">AC自动机</a> <a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/codeforces/" style="font-size: 10px;">codeforces</a> <a href="/tags/home/" style="font-size: 10px;">home</a> <a href="/tags/program/" style="font-size: 10px;">program</a> <a href="/tags/start/" style="font-size: 10px;">start</a> <a href="/tags/分块/" style="font-size: 10px;">分块</a> <a href="/tags/字符串课程/" style="font-size: 10px;">字符串课程</a> <a href="/tags/树状数组/" style="font-size: 10px;">树状数组</a> <a href="/tags/简单题/" style="font-size: 10px;">简单题</a> <a href="/tags/逆序数问题/" style="font-size: 10px;">逆序数问题</a>
+      <a href="/tags/ACM理论学习/" style="font-size: 10px;">ACM理论学习</a> <a href="/tags/AC自动机/" style="font-size: 10px;">AC自动机</a> <a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/codeforces/" style="font-size: 10px;">codeforces</a> <a href="/tags/home/" style="font-size: 10px;">home</a> <a href="/tags/program/" style="font-size: 10px;">program</a> <a href="/tags/start/" style="font-size: 10px;">start</a> <a href="/tags/分块/" style="font-size: 10px;">分块</a> <a href="/tags/字符串课程/" style="font-size: 10px;">字符串课程</a> <a href="/tags/树状数组/" style="font-size: 10px;">树状数组</a> <a href="/tags/简单题/" style="font-size: 10px;">简单题</a> <a href="/tags/软件工程/" style="font-size: 10px;">软件工程</a> <a href="/tags/逆序数问题/" style="font-size: 10px;">逆序数问题</a>
     </div>
   </div>
 
@@ -510,6 +608,14 @@
       <ul>
         
           <li>
+            <a href="/2017/04/21/ER图/">ER图</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/20/Android-杂记/">Android 杂记</a>
+          </li>
+        
+          <li>
             <a href="/2017/04/19/网址导航/">网址导航</a>
           </li>
         
@@ -519,14 +625,6 @@
         
           <li>
             <a href="/2017/04/01/AC自动机进阶/">AC自动机进阶</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/29/ACM题解-codeforce-402div2-A/">ACM题解-codeforce-402div2-A</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/18/ACM题解-codeforce-404div2-E/">ACM题解 codeforce-404div2-E</a>
           </li>
         
       </ul>

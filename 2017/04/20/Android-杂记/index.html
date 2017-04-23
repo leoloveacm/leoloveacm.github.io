@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档: 2017/3 | Sweet Orange</title>
+  <title>Android 杂记 | Sweet Orange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="geekorang(neko34)&apos;s blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sweet Orange">
-<meta property="og:url" content="http://yoursite.com/archives/2017/03/index.html">
+  <meta name="description" content="新版的android中不建议使用actionbar，而是建议使用toolbar12345678&amp;lt;android.support.v7.widget.Toolbar        android:id=&quot;@+id/activity_login_toolbar&quot;        android:layout_height=&quot;wrap_content&quot;        android:minHeig">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android 杂记">
+<meta property="og:url" content="http://yoursite.com/2017/04/20/Android-杂记/index.html">
 <meta property="og:site_name" content="Sweet Orange">
-<meta property="og:description" content="geekorang(neko34)&apos;s blog">
+<meta property="og:description" content="新版的android中不建议使用actionbar，而是建议使用toolbar12345678&amp;lt;android.support.v7.widget.Toolbar        android:id=&quot;@+id/activity_login_toolbar&quot;        android:layout_height=&quot;wrap_content&quot;        android:minHeig">
+<meta property="og:updated_time" content="2017-04-21T01:57:13.901Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sweet Orange">
-<meta name="twitter:description" content="geekorang(neko34)&apos;s blog">
+<meta name="twitter:title" content="Android 杂记">
+<meta name="twitter:description" content="新版的android中不建议使用actionbar，而是建议使用toolbar12345678&amp;lt;android.support.v7.widget.Toolbar        android:id=&quot;@+id/activity_login_toolbar&quot;        android:layout_height=&quot;wrap_content&quot;        android:minHeig">
   
     <link rel="alternate" href="/atom.xml" title="Sweet Orange" type="application/atom+xml">
   
@@ -66,96 +67,77 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/29/ACM题解-codeforce-402div2-A/" class="archive-article-date">
-  <time datetime="2017-03-29T07:21:44.000Z" itemprop="datePublished">3月 29</time>
+        <section id="main"><article id="post-Android-杂记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/20/Android-杂记/" class="article-date">
+  <time datetime="2017-04-20T12:55:46.000Z" itemprop="datePublished">2017-04-20</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/29/ACM题解-codeforce-402div2-A/">ACM题解-codeforce-402div2-A</a>
+    <h1 class="article-title" itemprop="name">
+      Android 杂记
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/18/ACM题解-codeforce-404div2-E/" class="archive-article-date">
-  <time datetime="2017-03-18T07:55:20.000Z" itemprop="datePublished">3月 18</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/18/ACM题解-codeforce-404div2-E/">ACM题解 codeforce-404div2-E</a>
-    </h1>
-  
+        <ol>
+<li>新版的android中不建议使用actionbar，而是建议使用toolbar<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;android.support.v7.widget.Toolbar</div><div class="line">        android:id="@+id/activity_login_toolbar"</div><div class="line">        android:layout_height="wrap_content"</div><div class="line">        android:minHeight="?attr/actionBarSize"</div><div class="line">        android:background="?attr/colorPrimary"</div><div class="line">        android:layout_alignParentEnd="true"</div><div class="line">        android:layout_width="match_parent"&gt;</div><div class="line">&lt;/android.support.v7.widget.Toolbar&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>代码在上面</p>
+<ol>
+<li><p>设置透明：<br>android background=”#00000000”(8个0，注意必须是8个)</p>
+</li>
+<li><p>在Android中提示用户可以用Toast,具体的创建方法是：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Toast toast = Toast.makeText(getApplicationContext(),<span class="string">"用户"</span>+bundle.getString(<span class="string">"username"</span>)+<span class="string">"上线"</span> , Toast.LENGTH_SHORT);</div><div class="line">toast.show();</div></pre></td></tr></table></figure>
+</li>
+<li><p>对于ExpandableList的使用<br>非常好看的分层列表样式，使用的时候必须</p>
+</li>
+<li></li>
+</ol>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/16/AndroidLearning(1)/" class="archive-article-date">
-  <time datetime="2017-03-15T16:08:04.000Z" itemprop="datePublished">3月 16</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/16/AndroidLearning(1)/">AndroidLearning(1)——UI设计</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/15/hello-blog-on-github/" class="archive-article-date">
-  <time datetime="2017-03-15T09:59:35.000Z" itemprop="datePublished">3月 15</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/20/Android-杂记/" data-id="cj1rts9ph0015mso059ihxfz2" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/15/hello-blog-on-github/">hello blog on github</a>
-    </h1>
-  
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/21/ER图/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ER图
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/19/网址导航/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">网址导航</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
